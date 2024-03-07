@@ -1,0 +1,28 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+}
+
+.ying-yang {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 1px solid #000;
+    background-image: 
+    radial-gradient(100px circle at 50% 25%, #000 8%, transparent 8%),
+    radial-gradient(100px circle at 50% 25%, #fff 50%, transparent 50%),
+    radial-gradient(100px circle at 50% 75%, #fff 8%, transparent 8%),
+    radial-gradient(100px circle at 50% 75%, #000 50%, transparent 50%),
+    linear-gradient(to right, #fff 50%, #000 50%);
+}

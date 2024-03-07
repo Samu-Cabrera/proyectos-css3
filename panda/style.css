@@ -1,0 +1,97 @@
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: hsla(360, 100%, 0%, .1);
+}
+
+.panda {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 150px;
+    border: 6px solid;
+    border-radius: 50%;
+    background-color: hsl(360, 100%, 100%);
+}
+
+.ears {
+    position: absolute;
+    top: -20px;
+    left: 0;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: hsl(360, 100%, 0%);
+    box-shadow: 118px 0;
+    z-index: -1;
+}
+
+.eyes {
+    position: absolute;
+    top: 30px;
+    left: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: hsl(360, 100%, 0%);
+    border-radius: 50%;
+
+}
+
+.pupil {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 28px;
+    height: 28px;
+    background-color: hsl(360, 100%, 100%);
+    border-radius: 50%;
+    box-shadow: -15px 20px 0 -8px hsl(360, 100%, 100%);
+}
+
+.right {
+    left: initial;
+    right: 20px;
+}
+
+.nose {
+    position: relative;
+    top: 20px;
+    width: 30px;
+    height: 20px;
+    background-color: hsl(360, 100%, 0%);
+    border-radius: 50%;
+
+}
+
+.nose::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 12px;
+    width: 5px;
+    height: 14px;
+    background-color: hsl(360, 100%, 0%);
+
+}
+
+.nose::after {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: -5px;
+    width: 40px;
+    height: 20px;
+    border: 6px solid hsl(360, 100%, 0%);
+    border-radius: 0 0 60px 60px;
+    border-top: transparent;
+}

@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: hsla(0, 100%, 0%, .1);
+}
+
+.pokebola {
+    width: 250px;
+    height: 250px;
+    border: 4px solid;
+    border-radius: 50%;
+    background-image: linear-gradient(#ff3e32 40%, #565658 40%, #565658 60%, #fff 60%);
+    display: flex;
+    position: relative;
+    overflow: hidden;
+}
+
+.line {
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    height: 4px;
+    background-color: hsl(0, 100%, 0%);
+    box-shadow: 0 44px;
+}
+
+.circle {
+    width: 95px;
+    height: 95px;
+    border-radius: 50%;
+    border: 4px solid;
+    margin: auto;
+    background-color: #565658;
+    z-index: 1;
+    display: grid;
+    place-items: center;
+}
+
+.circle::before, .circle::after {
+    content: '';
+    border: inherit;
+    border-radius: 50%;
+    background-color: #fff;
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+
+.circle::before {
+    width: 60%;
+    height: 60%;
+
+}
+
+.circle::after {
+    width: 28px;
+    height: 28px;
+}

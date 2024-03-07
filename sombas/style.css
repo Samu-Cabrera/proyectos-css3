@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background: #333;
+}
+.circul {
+    width: 200px;
+    height: 200px;
+    background: #d00101;
+    border-radius: 50%;
+    /*box-shadow: horizontal vertical difuminado color | sombra interna, otras sombas*/
+    box-shadow: -15px -15px 20px rgba(0,0,0,.4) inset,
+    10px 10px 20px rgba(255,255,255,.5) inset,
+    10px 20px 20px rgba(0,0,0,.4);
+}

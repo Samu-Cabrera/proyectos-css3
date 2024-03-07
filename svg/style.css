@@ -1,0 +1,27 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.bg {
+    animation: animarbg1 1s;
+}
+
+@keyframes animarbg1 {
+    from {
+        opacity: 0;
+    }
+}
+
+.letra {
+    animation: animarLetra 1s .1s;
+    transform-origin: center center;
+}
+
+@keyframes animarLetra {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+}
