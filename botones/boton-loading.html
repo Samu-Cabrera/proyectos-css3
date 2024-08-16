@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boton loading</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.min.css" rel="stylesheet">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #11102d;
+        }
+
+        .button {
+            display: block;
+            width: 180px;
+            height: 70px;
+            background-color: none;
+            font-size: 1.5em;
+            text-align: center;
+            border-radius: 50px;
+            border: 2px solid #fff;
+            border: none;
+            box-shadow: 0 15px 20px rgba(0, 0, 0, .15);
+            transition: all .2s ease;
+        }
+
+        .loader {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            font-size: 0;
+            border: 4px solid #fff;
+            background-color: transparent;
+            border-top-color: transparent;
+            animation: animateButtonLoading 1s .4s linear infinite;
+        }
+
+        @keyframes animateButtonLoading {
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .finished {
+            position: relative;
+            width: 70px;
+            height: 70px;
+            border: none;
+            background-color: #fff;
+            font-size: 0;
+            animation: finishedAnimations 1s ease-in;
+        }
+
+        .finished::after {
+            content: url('check-line.png');
+            width: 100%;
+            height: 100%;
+            color: #fff;
+            font-size: 3em;
+        }
+
+        @keyframes finishedAnimations {
+            10% {
+                transform: scale(0.8) translateY(20px);
+            }
+            35% {
+                transform: scale(1) translateY(0px);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <button class="button" id="btn">
+        Guardar
+    </button>
+
+    <script>
+        const btn = document.getElementById('btn');
+        const body = document.querySelector('body');
+
+        btn.addEventListener('click', ($event) => {
+            btn.classList.add('loader');
+
+            setTimeout(() => {
+                btn.classList.add('finished');
+                btn.classList.remove('loader');
+            }, 2000);
+        });
+    </script>
+</body>
+</html>
