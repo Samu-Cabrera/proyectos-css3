@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Responsive</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <!-- button para expandir sidebar -->
+             <div class="menu__btn">
+                <i class="ri-arrow-left-s-line"></i>
+             </div>
+
+            <!-- cabecera -->
+            <div class="head">
+                <div class="user__img">
+                    <img src="https://image.cdn2.seaart.ai/static/fdf198a3bda021ef2a7c9ba574aa6a1a/1685066706067/27b388472d9ebf95a47c8eea5bc807f8.jpeg" alt="User img">
+                </div>
+                <div class="user__details">
+                    <h3 class="title">Web developer</h3>
+                    <p class="name">Samu Cabrera</p>
+                </div>
+            </div>
+
+            <!-- navegación -->
+             <nav class="nav">
+                <div class="menu">
+                    <p class="title">Main</p>
+                    <ul>
+                        <li class="active">
+                            <a href="#">
+                                <i class="icon ri-home-line"></i>
+                                <span class="text">Dashboard</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="icon ri-user-line"></i>
+                                <span class="text">Audience</span>
+                                <i class="arrow ri-arrow-down-s-line"></i>
+                            </a>
+
+                            <!-- submenu -->
+                             <ul class="sub__menu">
+                                <li>
+                                    <a href="#">
+                                        <span class="text">Users</span>
+                                    </a>
+                                </li>
+                             </ul>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class=" icon ri-file-2-line"></i>
+                                <span class="text">Posts</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class=" icon ri-calendar-line"></i>
+                                <span class="text">Schedules</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="icon ri-bar-chart-line"></i>
+                                <span class="text">Income</span>
+                                <i class="arrow ri-arrow-down-s-line"></i>
+                            </a>
+
+                            <!-- submenu -->
+                             <ul class="sub__menu">
+                                <li>
+                                    <a href="#">
+                                        <span class="text">Earnings</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="text">Funds</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="text">Lorem</span>
+                                    </a>
+                                </li>
+                             </ul>
+                        </li>
+                    </ul>
+                </div>
+             </nav>
+
+             <div class="menu">
+                <p class="title">Acount</p>
+                <ul>
+                    <li>
+                        <a href="#">
+                            <i class="icon ri-settings-4-line"></i>
+                            <span class="text">Help</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="icon ri-logout-box-r-line"></i>
+                            <span class="text">Logout</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/main.js"></script>
+</body>
+</html>
