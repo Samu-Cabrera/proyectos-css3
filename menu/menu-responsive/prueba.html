@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sidebar Fixed Example</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            overflow-x: hidden;
+        }
+        .container {
+            display: flex;
+            min-height: 100vh;
+            background-color: rgb(192, 255, 234);
+        }
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 250px;
+            height: 100vh;
+            background-color: #fff;
+            border-right: 1px solid gray;
+            padding: 20px;
+            transition: width 0.3s ease;
+            z-index: 1000;
+            overflow: hidden;
+        }
+        .sidebar .btn__menu {
+            position: absolute;
+            top: 20px;
+            right: -15px;
+            width: 30px;
+            height: 30px;
+            background-color: #fff;
+            border-radius: 50%;
+            border: 1px solid rgba(0,0,0, .2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+        .main-content {
+            flex-grow: 1;
+            margin-left: 250px;
+            transition: margin-left 0.3s ease;
+            padding: 20px;
+        }
+        main {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        main section {
+            height: 150px;
+            background-color: #fff;
+            border-radius: 20px;
+            border: 1px solid gray;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .sidebar-collapsed .sidebar {
+            width: 90px;
+        }
+        .sidebar-collapsed .main-content {
+            margin-left: 90px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="sidebar">
+            <button class="btn__menu" aria-label="Toggle sidebar">
+                &gt;
+            </button>
+            <h2>Navigation</h2>
+            
+        </nav>
+        <div class="main-content">
+            <main>
+                <section id="section1">Section 1</section>
+                <section id="section2">Section 2</section>
+                <section id="section3">Section 3</section>
+                <section id="section4">Section 4</section>
+                <section>Section 5</section>
+                <section>Section 6</section>
+                <section>Section 7</section>
+                <section>Section 8</section>
+            </main>
+        </div>
+    </div>
+
+    <script> 
+        const btn = document.querySelector('.btn__menu');
+        const container = document.querySelector('.container');
+
+        btn.addEventListener('click', () => {
+            container.classList.toggle('sidebar-collapsed');
+        });
+    </script>
+</body>
+</html>

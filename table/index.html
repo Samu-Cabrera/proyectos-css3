@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"rel="stylesheet"/>
+</head>
+<body>
+    <main class="table">
+        <section class="table__header">
+            <h2>
+                Titulo de la tabla
+            </h2>
+            <div class="input__group">
+                <input type="text" placeholder="Search data...">
+                <i class="ri-search-2-line"></i>
+            </div>
+        </section>
+        <section class="table__body">
+            <table>
+                <!-- Define la cabecera de la tabla -->
+                <thead>
+                    <!-- Definir filas -->
+                    <tr>
+                        <!-- Define un encabezado de columna -->
+                        <th>id</th>
+                        <th>Customer</th>
+                        <th>Location</th>
+                        <th>Order date</th>
+                        <th>Status</th>
+                        <th>Amount</th>
+                    </tr>
+                </thead>
+
+                <!-- Cuperpo de la tabla -->
+                 <tbody>
+                    <tr>
+                        <!-- Define una celda de datos -->
+                        <td>1</td>
+                        <td>
+                            <img src="https://res.cloudinary.com/die4hw70e/image/upload/v1728483693/samu-img/user_avatar_sirmyv.jpg" alt="avatar">
+                            Jorge Fernández
+                        </td>
+                        <td>Cnl Bogado</td>
+                        <td>14, Agosto 2024</td>
+                        <td>
+                            <p class="status activo">Activo</p>
+                        </td>
+                        <td>$1.500</td>
+                    </tr>
+                    <tr>
+                        <!-- Define una celda de datos -->
+                        <td>2</td>
+                        <td>
+                            <img src="https://res.cloudinary.com/die4hw70e/image/upload/v1728483693/samu-img/user_avatar_sirmyv.jpg" alt="avatar">
+                            Jorge Fernández
+                        </td>
+                        <td>Cnl Bogado</td>
+                        <td>14, Agosto 2024</td>
+                        <td>
+                            <p class="status cancelado">Activo</p>
+                        </td>
+                        <td>$1.500</td>
+                    </tr>
+                    <tr>
+                        <!-- Define una celda de datos -->
+                        <td>3</td>
+                        <td>
+                            <img src="https://res.cloudinary.com/die4hw70e/image/upload/v1728483693/samu-img/user_avatar_sirmyv.jpg" alt="avatar">
+                            Ariel Fernández
+                        </td>
+                        <td>Cnl Bogado</td>
+                        <td>14, Agosto 2024</td>
+                        <td>
+                            <p class="status cancelado">Activo</p>
+                        </td>
+                        <td>$1.500</td>
+                    </tr>
+                    <tr>
+                        <!-- Define una celda de datos -->
+                        <td>4</td>
+                        <td>
+                            <img src="https://res.cloudinary.com/die4hw70e/image/upload/v1728483693/samu-img/user_avatar_sirmyv.jpg" alt="avatar">
+                            Luis Fernández
+                        </td>
+                        <td>Cnl Bogado</td>
+                        <td>14, Agosto 2024</td>
+                        <td>
+                            <p class="status cancelado">Activo</p>
+                        </td>
+                        <td>$1.500</td>
+                    </tr>
+                    <tr>
+                        <!-- Define una celda de datos -->
+                        <td>5</td>
+                        <td>
+                            <img src="https://res.cloudinary.com/die4hw70e/image/upload/v1728483693/samu-img/user_avatar_sirmyv.jpg" alt="avatar">
+                            Jorge Fernández
+                        </td>
+                        <td>Cnl Bogado</td>
+                        <td>14, Agosto 2024</td>
+                        <td>
+                            <p class="status cancelado">Activo</p>
+                        </td>
+                        <td>$1.500</td>
+                    </tr>
+                 </tbody>
+
+            </table>
+        </section>
+    </main>
+
+    <script src="./app.js"></script>
+</body>
+</html>

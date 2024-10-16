@@ -1,0 +1,169 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('https://img.freepik.com/fotos-premium/hermosos-fondos-pagina-web-sobre-multimedia_590200-5911.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+main.table {
+    width: 80vw;
+    height: 90vh;
+    background-color: #FFF5;
+    /* backdrop-filter: blur(7px); */
+    border-radius: 10px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, .2);
+    overflow: hidden;
+}
+
+table {
+    width: 100%;
+}
+
+.table__header {
+    width: 100%;
+    padding: 10px;
+    background-color: #FFF4;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* input search */
+.table__header .input__group {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff5;
+    border-radius: 20px;
+    padding: 10px;
+    transition: all .2s ease-in-out;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, .10);
+
+}
+.table__header .input__group:hover {
+    width: 40%;
+    background-color: #fff7;
+    transition: all .2s ease-in-out;
+}
+
+.input__group input {
+    width: 100%;
+    height: 100%;
+    padding: 0 10px 0 10px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+td img {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+table, th, td {
+    padding: 16px;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.table__body {
+    width: 95%;
+    max-height: calc(100% - 8rem);
+    background-color: #FFFB;
+    margin: .8rem auto;
+    border-radius: 10px;
+    overflow-y: auto;
+    overflow-x: auto;
+    overflow: overlay;
+}
+.table__body::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+.table__body::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background-color: #0004;
+    visibility: hidden;
+}
+.table__body:hover::-webkit-scrollbar-thumb {
+    visibility: visible;
+}
+
+thead th {
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: #d5d1d2fe;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #0000000b;
+}
+tbody tr {
+    --delay: .1s;
+    transition: all .5s ease-in-out var(--delay), background-color 0s;
+}
+tbody tr.hide {
+    opacity: 0;
+    transform: translateX(100%);
+}
+
+tbody tr:hover {
+    background-color: #fff6;
+    transition: background-color .3s ease-in-out;
+}
+tbody .status {
+    padding: 8px;
+    border-radius: 10px;
+    text-align: center;
+}
+tbody tr td,
+tbody tr td p,
+tbody tr td img {
+    transition: all .2s ease-in-out;
+}
+tbody tr.hide td,
+tbody tr.hide td p {
+    padding: 0;
+    font: 0 / 0 sans-serif;
+    transition: all .2s ease-in-out .5s;
+}
+tbody tr.hide td img {
+    width: 0;
+    height: 0;
+    transition: all .2s ease-in-out .5s;
+
+}
+
+
+.status.activo{
+    background-color: #86e49d;
+    color: #006b21;   
+}
+.status.cancelado {
+    background-color: #d893a3;
+    color: #b30021;
+}
+
+@media(max-width: 1000px){
+    td:not(:first-of-type){
+        min-width: 193.6px;
+    }
+}
+
